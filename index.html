@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bazaar - Your trusted Islamic lifestyle store in Uganda. Shop perfumes, halal cosmetics, Islamic clothing, houseware, and appliances.">
+    <meta name="keywords" content="Islamic store, halal, Uganda, Mbale, Kampala, perfumes, hijabs, abayas">
+    <meta name="author" content="Bazaar Islamic Store">
+    
+    <title>Bazaar - Islamic Lifestyle Store Uganda</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="cssstyle.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1>🛍️ Bazaar</h1>
+                    <span class="tagline">Your Trusted Islamic Lifestyle Store</span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="#branches">Branches</a></li>
+                    <li>
+                        <a href="cart.html" class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count" class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Islamic Pattern -->
+    <section class="hero">
+        <div class="hero-pattern"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welcome to Bazaar</h2>
+                <p>Your trusted destination for halal and modest lifestyle products in Uganda</p>
+                <a href="products.html" class="btn btn-primary">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="perfumes">
+                    <div class="category-icon">🌿</div>
+                    <h3>Perfumes & Cosmetics</h3>
+                    <p>Alcohol-free & Halal beauty</p>
+                </div>
+                
+                <div class="category-card" data-category="clothing">
+                    <div class="category-icon">🧕</div>
+                    <h3>Islamic Clothing</h3>
+                    <p>Abayas, Hijabs, Thobes</p>
+                </div>
+                
+                <div class="category-card" data-category="houseware">
+                    <div class="category-icon">🏠</div>
+                    <h3>Houseware</h3>
+                    <p>Kitchen & Dining essentials</p>
+                </div>
+                
+                <div class="category-card" data-category="appliances">
+                    <div class="category-icon">🔌</div>
+                    <h3>Home Appliances</h3>
+                    <p>Modern convenience for your home</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div id="featured-products-grid" class="products-grid">
+                <!-- Products will be loaded dynamically via JavaScript -->
+                <div class="loading-spinner">Loading products...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branch Locations -->
+    <section id="branches" class="branches">
+        <div class="container">
+            <h2 class="section-title">Our Branches</h2>
+            <div class="branch-grid">
+                <div class="branch-card">
+                    <div class="branch-icon">🏢</div>
+                    <h3>Mbale City</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Headquarters</p>
+                    <p>Main Street, Mbale</p>
+                    <p><i class="fas fa-phone"></i> +256 700 000001</p>
+                </div>
+                
+                <div class="branch-card">
+                    <div class="branch-icon">🏬</div>
+                    <h3>Kampala</h3>
+                    <p>Clock Tower, Kampala</p>
+                    <p><i class="fas fa-phone"></i> +256 700 000002</p>
+                </div>
+                
+                <div class="branch-card">
+                    <div class="branch-icon">🏪</div>
+                    <h3>Jinja</h3>
+                    <p>Main Street, Jinja</p>
+                    <p><i class="fas fa-phone"></i> +256 700 000003</p>
+                </div>
+                
+                <div class="branch-card">
+                    <div class="branch-icon">🏛️</div>
+                    <h3>Mbarara</h3>
+                    <p>High Street, Mbarara</p>
+                    <p><i class="fas fa-phone"></i> +256 700 000004</p>
+                </div>
+                
+                <div class="branch-card">
+                    <div class="branch-icon">🕌</div>
+                    <h3>Gulu</h3>
+                    <p>Central Market, Gulu</p>
+                    <p><i class="fas fa-phone"></i> +256 700 000005</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bazaar</h3>
+                    <p>Your trusted Islamic lifestyle store in Uganda. Providing quality halal products since 2024.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="#branches">Branches</a></li>
+                        <li><a href="admin.html">Admin</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> twalahahabab@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +256 700 000000</p>
+                    <p><i class="fas fa-map-marker"></i> Headquarters: Mbale City, Uganda</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bazaar Islamic Store. All rights reserved. | Admin: twalahahabab@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="jsapi.js"></script>
+    <script src="jscart.js"></script>
+    <script src="jsapp.js"></script>
+</body>
+</html>

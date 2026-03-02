@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop Islamic products in Uganda - Perfumes, clothing, houseware and more at Bazaar">
+    <title>Shop Products - Bazaar Islamic Store</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="cssstyle.css">
+</head>
+<body>
+    <!-- Header (same as index.html) -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1>🛍️ Bazaar</h1>
+                    <span class="tagline">Your Trusted Islamic Lifestyle Store</span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Shop</a></li>
+                    <li><a href="index.html#branches">Branches</a></li>
+                    <li>
+                        <a href="cart.html" class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count" class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Shop</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section with Filters -->
+    <section class="products-page">
+        <div class="container">
+            <div class="products-layout">
+                <!-- Sidebar Filters -->
+                <aside class="filters-sidebar">
+                    <h3>Categories</h3>
+                    <ul class="category-filters">
+                        <li>
+                            <label>
+                                <input type="checkbox" value="all" checked> All Products
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="Perfumes & Cosmetics"> 🌿 Perfumes & Cosmetics
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="Islamic Clothing"> 🧕 Islamic Clothing
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="Houseware"> 🏠 Houseware & Kitchenware
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="Home Appliances"> 🔌 Home Appliances
+                            </label>
+                        </li>
+                    </ul>
+                    
+                    <h3>Price Range</h3>
+                    <div class="price-filter">
+                        <input type="range" id="price-range" min="0" max="1000000" step="10000" value="1000000">
+                        <div class="price-values">
+                            <span>0 UGX</span>
+                            <span id="max-price-label">1,000,000 UGX</span>
+                        </div>
+                    </div>
+                    
+                    <h3>Stock Status</h3>
+                    <ul class="stock-filters">
+                        <li>
+                            <label>
+                                <input type="checkbox" id="in-stock-only"> In Stock Only
+                            </label>
+                        </li>
+                    </ul>
+                    
+                    <button id="apply-filters" class="btn btn-primary">Apply Filters</button>
+                    <button id="clear-filters" class="btn btn-secondary">Clear</button>
+                </aside>
+                
+                <!-- Products Grid -->
+                <main class="products-main">
+                    <div class="products-header">
+                        <div class="results-count">
+                            <span id="products-count">0</span> products found
+                        </div>
+                        <div class="sort-options">
+                            <label for="sort-by">Sort by:</label>
+                            <select id="sort-by">
+                                <option value="default">Default</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="name">Name</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div id="products-grid" class="products-grid">
+                        <!-- Products loaded dynamically -->
+                        <div class="loading-spinner">Loading products...</div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="jsapi.js"></script>
+    <script src="jscart.js"></script>
+    <script src="jsapp.js"></script>
+</body>
+</html>
