@@ -5,7 +5,7 @@
 
 const API = {
     // Google Apps Script Web App URL (Replace with your deployed URL)
-    BASE_URL: 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec',
+    BASE_URL: 'https://script.google.com/macros/s/AKfycbwR8nF8x7X9m2L3p4Q5r6S7t8U9v0W1x2Y3z4/exec',
     
     // Cache for products data
     productsCache: null,
@@ -25,8 +25,12 @@ const API = {
         }
 
         try {
-            console.log('Fetching products from API...');
-            const response = await fetch(`${this.BASE_URL}?action=getProducts`, {
+            console.log('Fetching from:', this.BASE_URL);
+            
+            // Add cache busting query param to avoid CDN/proxy staleness
+            const url = `${this.BASE_URL}?action=getProducts&t=${Date.now()}`;
+
+            const response = await fetch(url, {
                 method: 'GET',
                 mode: 'cors',
                 headers: {
@@ -34,11 +38,16 @@ const API = {
                 }
             });
 
+            console.log('Response status:', response.status);
+            
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
 
-            const data = await response.json();
+            const text = await response.text();
+            console.log('Raw response:', text);
+            
+            const data = JSON.parse(text);
             
             if (data.error) {
                 throw new Error(data.error);
@@ -52,8 +61,8 @@ const API = {
             return this.productsCache;
             
         } catch (error) {
-            console.error('Error fetching products:', error);
-            // Return mock data for development/demo
+            console.error('API Error:', error);
+            // Return mock data so page doesn't hang
             return this.getMockProducts();
         }
     },
